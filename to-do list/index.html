@@ -3,31 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do-List</title>
-    <style>
-        .completed-list {
-            display: none;
-            margin-top: 20px;
-        }
-    </style>
+    <title>To-Do Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
-    <h1>To-Do-List</h1>
-    
-    <input type="text" id="taskInput" placeholder="Enter a new task">
-    <button onclick="addTask()">Add Task</button>
-    <button class="showList" onclick="toggleCompletedList()">Show Completed Tasks</button>
 
-   <div>
-    <h3>Task List</h3>
-    <ul id="taskList"></ul>
-   </div>
+    <div class="container">
 
-    <div class="completed-list">
-        <h3>Completed Tasks</h3>
-        <ul id="completedTaskList"></ul>
+        <!-- Header -->
+        <header>
+            <h1>📝 To-Do Dashboard</h1>
+        </header>
+
+        <!-- Dashboard -->
+        <div class="dashboard">
+
+            <!-- Left Side -->
+            <div class="left-panel">
+
+                <!-- Pending Tasks -->
+                <div class="card">
+
+                    <div class="card-heading">
+                        <h2>Pending Tasks</h2>
+
+                        <span id="pendingCount">0 Tasks</span>
+                    </div>
+
+                    <ol id="taskList">
+
+                        <!-- Dynamic Tasks -->
+
+                    </ol>
+
+                </div>
+
+                <!-- Completed Tasks -->
+
+                <div class="card completed-card">
+
+                    <div class="card-heading">
+
+                        <h2>Completed Tasks</h2>
+
+                        <span id="completedCount">0 Tasks</span>
+
+                    </div>
+
+                    <ol id="completedTaskList">
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+            <!-- Right Side -->
+
+            <div class="right-panel">
+
+                <div class="card">
+
+                    <h2>Add New Task</h2>
+
+                    <div class="input-box">
+
+                        <input
+                            type="text"
+                            id="taskInput"
+                            placeholder="Enter your task..."
+                        >
+
+                        <button id="addBtn" onclick="addTask()">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                            Add Task
+
+                        </button>
+
+                    </div>
+
+                    <button
+                        class="showList"
+                        onclick="toggleCompletedList()"
+                    >
+
+                        <i class="fa-solid fa-eye"></i>
+
+                        Show Completed Tasks
+
+                    </button>
+
+                </div>
+
+                <!-- Statistics -->
+
+                <div class="card stats">
+
+                    <h2>Task Summary</h2>
+
+                    <div class="stat-box">
+
+                        <h3>Total Pending</h3>
+
+                        <p id="pendingSummary">0</p>
+
+                    </div>
+
+                    <div class="stat-box">
+
+                        <h3>Total Completed</h3>
+
+                        <p id="completedSummary">0</p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
     </div>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
+
 </body>
 </html>
