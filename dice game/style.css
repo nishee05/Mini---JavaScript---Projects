@@ -1,0 +1,39 @@
+h4 {
+    font-size: 36px;
+}
+.playerbox {
+    height: 75vh;
+    width: 30%;
+    position: relative;
+    z-index: 1;
+}
+.center-box {
+    height: 70vh;
+    position: absolute; 
+    z-index: 2; 
+    top: 50%;
+    transform: translateY(-50%);
+}
+.currentscore {
+    height: 200px;
+    width: 395px;
+}
+.pass button {
+    width: 100px !important;
+}
+.pass button, .newGame button {
+    border: none;
+    padding: 8px 0px;
+    width: 150px;
+    border-radius: 20px;
+}
+.active-player {
+    background-color: rgba(31, 124, 143, 0.8); /* Add a semi-transparent background */
+    backdrop-filter: blur(30px); /* Ensure a visible filter effect */
+    -webkit-backdrop-filter: blur(30px); /* Add webkit prefix for Safari compatibility */
+}
+
+.inactive-player {
+    background-color: rgb(116, 182, 195); /* Regular background for inactive player */
+}
+

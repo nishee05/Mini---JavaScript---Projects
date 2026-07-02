@@ -1,0 +1,91 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #4f5840d6;
+    color: #ffffff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    background: #4f5840;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    
+}
+
+/* Title Styling */
+
+
+/* Textarea Styling */
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 15px;
+    font-size: 1rem;
+    color: #f8f9fa;
+    background:rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Counter Section Styling */
+.counter {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.counter p {
+    font-size: 1rem;
+    margin: 10px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.counter p span {
+    font-weight: bold;
+    color: #e0aaff;
+}
+
+/* Hover Effects */
+
+
+.counter p:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.02);
+    transition: 0.3s ease-in-out;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    textarea {
+        height: 120px;
+    }
+    .counter p {
+        font-size: 0.9rem;
+    }
+}
